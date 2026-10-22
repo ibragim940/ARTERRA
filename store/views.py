@@ -147,7 +147,7 @@ def cart_remove(request, artwork_id):
     request.session["cart"] = cart
     return redirect("cart")
 
-
+# Оформление заказа
 @login_required
 def checkout(request):
     cart, artworks, total = _get_cart_items(request)
